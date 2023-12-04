@@ -1,0 +1,31 @@
+6) -- Exercício 23
+SELECT p.nm_produto, p.qt_estoque, p.vl_produto
+FROM produto p
+JOIN categoria c ON p.cd_categoria = c.id
+WHERE c.nm_categoria = 'Eletrônicos';
+
+7) -- Exercício 24
+SELECT p.nm_produto, p.vl_produto, c.ds_categoria
+FROM produto p
+JOIN categoria c ON p.cd_categoria = c.id
+ORDER BY p.vl_produto DESC;
+
+8) -- Exercício 25
+SELECT p.nm_produto, p.qt_estoque, c.ds_categoria
+FROM produto p
+JOIN categoria c ON p.cd_categoria = c.id
+WHERE p.qt_estoque < 20
+ORDER BY p.qt_estoque;
+
+9) -- Exercício 26
+SELECT p.nm_produto, p.vl_produto, p.qt_estoque
+FROM produto p
+JOIN categoria c ON p.cd_categoria = c.id
+WHERE c.nm_categoria = 'Livros' AND p.vl_produto > 15;
+
+10) -- Exercício 27
+SELECT p.nm_produto, p.qt_estoque, c.ds_categoria
+FROM produto p
+JOIN categoria c ON p.cd_categoria = c.id
+WHERE p.qt_estoque > 50 AND c.nm_categoria = 'Casa e Jardim'
+ORDER BY p.qt_estoque DESC;
